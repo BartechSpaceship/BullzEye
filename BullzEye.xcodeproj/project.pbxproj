@@ -16,6 +16,8 @@
 		936C7052240A1E0500857381 /* BullzEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C7051240A1E0500857381 /* BullzEyeTests.swift */; };
 		936C705D240A1E0500857381 /* BullzEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C705C240A1E0500857381 /* BullzEyeUITests.swift */; };
 		936C706F240AE82500857381 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C706E240AE82500857381 /* ResultsViewController.swift */; };
+		93FE48B9240C3DEB007D1F64 /* BullzBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE48B8240C3DEB007D1F64 /* BullzBrain.swift */; };
+		93FE48BC240D486B007D1F64 /* BullzEye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE48BB240D486B007D1F64 /* BullzEye.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		936C705C240A1E0500857381 /* BullzEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullzEyeUITests.swift; sourceTree = "<group>"; };
 		936C705E240A1E0500857381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		936C706E240AE82500857381 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		93FE48B8240C3DEB007D1F64 /* BullzBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullzBrain.swift; sourceTree = "<group>"; };
+		93FE48BB240D486B007D1F64 /* BullzEye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullzEye.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			children = (
 				936C703A240A1E0300857381 /* AppDelegate.swift */,
 				936C703C240A1E0300857381 /* SceneDelegate.swift */,
+				93FE48BA240C3DEF007D1F64 /* Model */,
 				936C706A240A1E0E00857381 /* View */,
 				936C706B240A1E1500857381 /* Controller */,
 				936C7043240A1E0400857381 /* Assets.xcassets */,
@@ -145,6 +150,15 @@
 				936C706E240AE82500857381 /* ResultsViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		93FE48BA240C3DEF007D1F64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93FE48B8240C3DEB007D1F64 /* BullzBrain.swift */,
+				93FE48BB240D486B007D1F64 /* BullzEye.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +293,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				936C703F240A1E0300857381 /* ViewController.swift in Sources */,
+				93FE48BC240D486B007D1F64 /* BullzEye.swift in Sources */,
 				936C703B240A1E0300857381 /* AppDelegate.swift in Sources */,
+				93FE48B9240C3DEB007D1F64 /* BullzBrain.swift in Sources */,
 				936C703D240A1E0300857381 /* SceneDelegate.swift in Sources */,
 				936C706F240AE82500857381 /* ResultsViewController.swift in Sources */,
 			);

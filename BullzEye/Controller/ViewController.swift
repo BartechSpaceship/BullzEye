@@ -13,21 +13,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var bullLabel: UILabel!
     @IBOutlet weak var valueBar: UISlider!
     
-    var valueBarTransfer = "0.0"
+    var bullbrain = BullzBrain()
+    
+    var valueBarTransfer = "0"
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let randomInt = Int.random(in: 1...100)
-        bullLabel.text = "Try to get this number \(randomInt)"
+        updateUI()
         
     }
     @IBAction func guessTheNumber(_ sender: UIButton) {
         
-        valueBarTransfer = String(valueBar.value)
-        print(valueBarTransfer)
+        valueBarTransfer = String(format: "%.0f", valueBar.value)
+        
+        bullbrain.calculateValue(value: valueBarTransfer)
         
         
         performSegue(withIdentifier: "goToResult", sender: self)
@@ -35,25 +37,29 @@ class ViewController: UIViewController {
     @IBAction func getMoreInfo(_ sender: UIButton) {
         
         
+        
+        
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultsViewController
-           // destinationVC.labelValue = valueBarTransfer
-
-
-
-
-
-
-
-
-
+            //destinationVC.labelValue = valueBarTransfer
+            destinationVC.value = bullbrain.getBullValue()
+            destinationVC.advice = bullbrain.getAdvice()
+            destinationVC.color = bullbrain.getColor()
+            
+            
+            
+            
 
         }
         
     }
-    
+    func updateUI() {
+        //let randomInt = Int.random(in: 1...100)
+        bullLabel.text = "Try to get this number \(bullbrain.random)"
+    }
     
 }
 
