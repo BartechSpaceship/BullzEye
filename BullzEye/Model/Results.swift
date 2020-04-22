@@ -1,16 +1,18 @@
 //
-//  BullzEye.swift
+//  Results.swift
 //  BullzEye
 //
-//  Created by Bartek on 3/2/20.
+//  Created by Bartek on 4/20/20.
 //  Copyright © 2020 Bartek. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-struct BullzEye {
-    let value: Int
+struct Results {
+    
+    //let sliderValue: Int
     let advice: String
     let color: UIColor
-    //let random: Int
+   
 }

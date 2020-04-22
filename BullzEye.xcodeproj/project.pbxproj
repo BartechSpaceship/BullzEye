@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93465153244E8E7D0035FA40 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93465152244E8E7D0035FA40 /* Results.swift */; };
+		93465155244E8EC10035FA40 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93465154244E8EC10035FA40 /* Brain.swift */; };
 		936C703B240A1E0300857381 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C703A240A1E0300857381 /* AppDelegate.swift */; };
 		936C703D240A1E0300857381 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C703C240A1E0300857381 /* SceneDelegate.swift */; };
 		936C703F240A1E0300857381 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C703E240A1E0300857381 /* ViewController.swift */; };
@@ -16,8 +18,6 @@
 		936C7052240A1E0500857381 /* BullzEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C7051240A1E0500857381 /* BullzEyeTests.swift */; };
 		936C705D240A1E0500857381 /* BullzEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C705C240A1E0500857381 /* BullzEyeUITests.swift */; };
 		936C706F240AE82500857381 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C706E240AE82500857381 /* ResultsViewController.swift */; };
-		93FE48B9240C3DEB007D1F64 /* BullzBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE48B8240C3DEB007D1F64 /* BullzBrain.swift */; };
-		93FE48BC240D486B007D1F64 /* BullzEye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE48BB240D486B007D1F64 /* BullzEye.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93465152244E8E7D0035FA40 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		93465154244E8EC10035FA40 /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 		936C7037240A1E0300857381 /* BullzEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullzEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		936C703A240A1E0300857381 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		936C703C240A1E0300857381 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,8 +55,6 @@
 		936C705C240A1E0500857381 /* BullzEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullzEyeUITests.swift; sourceTree = "<group>"; };
 		936C705E240A1E0500857381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		936C706E240AE82500857381 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
-		93FE48B8240C3DEB007D1F64 /* BullzBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullzBrain.swift; sourceTree = "<group>"; };
-		93FE48BB240D486B007D1F64 /* BullzEye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullzEye.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +155,8 @@
 		93FE48BA240C3DEF007D1F64 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				93FE48B8240C3DEB007D1F64 /* BullzBrain.swift */,
-				93FE48BB240D486B007D1F64 /* BullzEye.swift */,
+				93465152244E8E7D0035FA40 /* Results.swift */,
+				93465154244E8EC10035FA40 /* Brain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,11 +293,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				936C703F240A1E0300857381 /* ViewController.swift in Sources */,
-				93FE48BC240D486B007D1F64 /* BullzEye.swift in Sources */,
 				936C703B240A1E0300857381 /* AppDelegate.swift in Sources */,
-				93FE48B9240C3DEB007D1F64 /* BullzBrain.swift in Sources */,
+				93465155244E8EC10035FA40 /* Brain.swift in Sources */,
 				936C703D240A1E0300857381 /* SceneDelegate.swift in Sources */,
 				936C706F240AE82500857381 /* ResultsViewController.swift in Sources */,
+				93465153244E8E7D0035FA40 /* Results.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
