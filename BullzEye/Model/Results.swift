@@ -11,7 +11,7 @@ import UIKit
 
 struct Results {
     
-    //let sliderValue: Int
+    
     let advice: String
     let color: UIColor
    

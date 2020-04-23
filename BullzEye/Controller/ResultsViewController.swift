@@ -13,12 +13,12 @@ class ResultsViewController: UIViewController {
     
    
     
-  //  var sliderValue: Int?
+    var sliderValue: Int?
     var advice: String?
     var color: UIColor?
    // var sliderValue = 0
  
-    //var randomNumber: Int = 0
+    var randomNumber: Int?
     
 
     @IBOutlet weak var scoreLabel: UILabel!
@@ -31,6 +31,8 @@ class ResultsViewController: UIViewController {
         scoreLabel.text = advice
 
         view.backgroundColor = color
+        
+        
         
     }
     

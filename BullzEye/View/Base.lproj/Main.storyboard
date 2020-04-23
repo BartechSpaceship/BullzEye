@@ -31,6 +31,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vad-NE-2s6">
+                                                <rect key="frame" x="149" y="246" width="117" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -108,6 +115,7 @@
                     </view>
                     <connections>
                         <outlet property="goalLabel" destination="Bs8-uw-wbp" id="aMr-Tx-Y6s"/>
+                        <outlet property="scoreLabel" destination="Vad-NE-2s6" id="WZR-xr-3m1"/>
                         <outlet property="sliderValue" destination="sEN-Te-nLU" id="7C5-HW-TJP"/>
                         <segue destination="3GX-Wa-DaI" kind="presentation" identifier="goToResult" id="9Tk-4Z-v4F"/>
                     </connections>

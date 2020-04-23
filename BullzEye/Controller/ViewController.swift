@@ -13,8 +13,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var goalLabel: UILabel!
     @IBOutlet weak var sliderValue: UISlider!
+    @IBOutlet weak var scoreLabel: UILabel!
     
-   
+    var count = 0
     var brain = Brain()
     var slider = 0
     
@@ -27,9 +28,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //Change the label to display, Try to get this number %
         
-        goalLabel.text = "Your goal is to hit \(brain.randomValue)"
         
-        
+       goalLabel.text = "Your goal is to hit \(brain.randomValue)"
         
         
     }
@@ -37,10 +37,11 @@ class ViewController: UIViewController {
     
     @IBAction func shootButton(_ sender: UIButton) {
         
-        //slider = Int(sliderValue.value)
-        slider = Int(sliderValue.value)
+       
         
+        slider = Int(sliderValue.value)
         brain.calculateSlider(slider: slider)
+         updateUI()
         self.performSegue(withIdentifier: "goToResult", sender: self)
         
     }
@@ -55,15 +56,29 @@ class ViewController: UIViewController {
                
                destinationVC.color = brain.getColor()
                destinationVC.advice = brain.getAdvice()
-               
+            destinationVC.randomNumber = brain.randomValue
+            destinationVC.sliderValue = slider
                
                
            }
        }
-//    func updateUI() -> String {
-//        //Will return the updated goalLabel if randomValue == Slider
-//    }
- 
+    func updateUI() {
+         
+        
+       
+        if slider == brain.randomValue {
+            count += 1
+            scoreLabel.text = "Score: \(count)"
+            brain.randomValue = Int.random(in: 0...100)
+            
+            goalLabel.text = "Your goal is to hit \(brain.randomValue)"
+        } else {
+            goalLabel.text = "Your goal is to hit \(brain.randomValue)"
+        }
+        
+        
+        
    
     
+}
 }
