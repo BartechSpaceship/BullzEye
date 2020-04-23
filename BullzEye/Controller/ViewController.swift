@@ -41,15 +41,27 @@ class ViewController: UIViewController {
         
         slider = Int(sliderValue.value)
         brain.calculateSlider(slider: slider)
-         updateUI()
+        updateUI()
         self.performSegue(withIdentifier: "goToResult", sender: self)
         
     }
+    
+    
     @IBAction func howToButton(_ sender: UIButton) {
+        let alert = UIAlertController(title: "BullzEye Instructions", message: "The slider goes from 0 to 100 and you have to guess where the number is located. Each time you guess the right number your score goes up by one, get 10 points and you realise you just wasted your life ", preferredStyle: .alert)
         
-        
-        
+        self.present(alert, animated: true, completion:{
+           alert.view.superview?.isUserInteractionEnabled = true
+           alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissOnTapOutside)))
+        })
     }
+    @objc func dismissOnTapOutside(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            if segue.identifier == "goToResult" {
                let destinationVC = segue.destination as! ResultsViewController
