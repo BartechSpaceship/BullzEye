@@ -20,10 +20,6 @@ class ViewController: UIViewController {
     var slider = 0
     
     
-    
-    var randy = Int.random(in: 0...100)
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Change the label to display, Try to get this number %
@@ -33,10 +29,10 @@ class ViewController: UIViewController {
         
         
     }
-   
+   //MARK: - Buttons
     
     @IBAction func shootButton(_ sender: UIButton) {
-        
+        sender.isSelected = false
        
         
         slider = Int(sliderValue.value)
@@ -44,9 +40,12 @@ class ViewController: UIViewController {
         updateUI()
         self.performSegue(withIdentifier: "goToResult", sender: self)
         
+        
+        
+        
     }
     
-    
+
     @IBAction func howToButton(_ sender: UIButton) {
         let alert = UIAlertController(title: "BullzEye Instructions", message: "The slider goes from 0 to 100 and you have to guess where the number is located. Each time you guess the right number your score goes up by one, get 10 points and you realise you just wasted your life ", preferredStyle: .alert)
         
@@ -59,21 +58,19 @@ class ViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    
-    
+//MARK: - Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            if segue.identifier == "goToResult" {
                let destinationVC = segue.destination as! ResultsViewController
                
                destinationVC.color = brain.getColor()
                destinationVC.advice = brain.getAdvice()
-            destinationVC.randomNumber = brain.randomValue
-            destinationVC.sliderValue = slider
+           
+       
                
                
            }
-       }
+       }//MARK: - Updates the current score and number
     func updateUI() {
          
         
